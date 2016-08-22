@@ -1,0 +1,263 @@
+<?xml version="1.0"?>
+<root>
+	<!--Tips-->
+	<!-- Extra1＋下一列(ZXCV..)のキーでのバインドは機能しない模様。謎。-->
+	<!-- 実行順序：上から順に適用規則を検査、発見し次第適用してBreak-->
+	
+	<!--アプリ定義-->
+	<appdef><appname>FINDER</appname><equal>com.apple.finder</equal></appdef>
+	<appdef><appname>TERMINAL</appname><equal>com.apple.Terminal</equal></appdef>
+	<appdef><appname>CHROME</appname><equal>com.google.Chrome</equal></appdef>
+	<appdef><appname>COTEDITOR</appname><equal>com.coteditor.CotEditor</equal></appdef>
+	<appdef><appname>TEAMVIEWER</appname><equal>com.teamviewer.TeamViewer</equal></appdef>
+
+	<!--TeamViewer(WindowsBind)-->
+	<item><name>CHANGE KEY BIND : TEAMVIEWER</name><identifier>private.change_teamviewer_key_bind</identifier>
+		<only>TEAMVIEWER</only>
+		
+	</item>
+
+	<!--Terminal-->
+	<item><name>CHANGE KEY BIND : TERMINAL</name><identifier>private.change_terminal_key_bind</identifier>
+		<only>TERMINAL</only> 
+		<autogen>__KeyToKey__ KeyCode::TAB, ModifierFlag::CONTROL_R | ModifierFlag::SHIFT_L, KeyCode::BRACKET_LEFT, ModifierFlag::SHIFT_L | ModifierFlag::COMMAND_L</autogen>
+		<autogen>__KeyToKey__ KeyCode::TAB, ModifierFlag::CONTROL_R, KeyCode::BRACKET_RIGHT, ModifierFlag::SHIFT_L | ModifierFlag::COMMAND_L</autogen>
+		<autogen>__KeyToKey__ KeyCode::BACKSLASH, ModifierFlag::COMMAND_R, KeyCode::U, ModifierFlag::CONTROL_R</autogen>
+		<autogen>__KeyToKey__ KeyCode::S, ModifierFlag::CONTROL_R | ModifierFlag::COMMAND_L, KeyCode::BRACKET_LEFT, ModifierFlag::SHIFT_L | ModifierFlag::COMMAND_L</autogen>
+		<autogen>__KeyToKey__ KeyCode::F, ModifierFlag::CONTROL_R | ModifierFlag::COMMAND_L, KeyCode::BRACKET_RIGHT, ModifierFlag::SHIFT_L | ModifierFlag::COMMAND_L</autogen>
+		<autogen>__KeyToKey__ KeyCode::W, ModifierFlag::COMMAND_R, KeyCode::A, ModifierFlag::CONTROL_R</autogen>
+		<autogen>__KeyToKey__ KeyCode::R, ModifierFlag::COMMAND_R, KeyCode::E, ModifierFlag::CONTROL_R</autogen>
+	</item>
+	
+	<!--COTEDITOR-->
+	<item><name>CHANGE KEY BIND : COTEDITOR</name><identifier>private.change_coteditor_key_bind</identifier>
+		<only>COTEDITOR</only>
+		<autogen>__KeyToKey__ KeyCode::SPACE, ModifierFlag::CONTROL_R, KeyCode::F5</autogen>
+	</item>
+	
+	<!--Chrome-->
+	<item><name>CHANGE KEY BIND : CHROME</name><identifier>private.change_chrome_key_bind</identifier>
+		<only>CHROME</only> 
+		<autogen>__KeyToKey__ KeyCode::Q, ModifierFlag::CONTROL_R, KeyCode::BRACKET_LEFT, ModifierFlag::COMMAND_L</autogen>
+		<autogen>__KeyToKey__ KeyCode::W, ModifierFlag::CONTROL_R, KeyCode::BRACKET_RIGHT, ModifierFlag::COMMAND_L</autogen>
+		<autogen>__KeyToKey__ KeyCode::S, ModifierFlag::CONTROL_R | ModifierFlag::COMMAND_L, KeyCode::TAB, ModifierFlag::CONTROL_R | ModifierFlag::SHIFT_L</autogen>
+		<autogen>__KeyToKey__ KeyCode::F, ModifierFlag::CONTROL_R | ModifierFlag::COMMAND_L, KeyCode::TAB, ModifierFlag::CONTROL_R</autogen>
+		<autogen>__KeyToKey__ KeyCode::R, ModifierFlag::CONTROL_R, 
+			KeyCode::L, ModifierFlag::COMMAND_L, KeyCode::RETURN, ModifierFlag::OPTION_L
+		</autogen>
+	</item>
+	
+	<!--カーソル移動増強-->
+	<item><name>CURSOR EXTENSIONS</name><identifier>private.cursor_extensions</identifier>
+		<autogen>__KeyToKey__ KeyCode::E, ModifierFlag::COMMAND_R, KeyCode::CURSOR_UP</autogen>
+		<autogen>__KeyToKey__ KeyCode::D, ModifierFlag::COMMAND_R, KeyCode::CURSOR_DOWN</autogen>
+		<autogen>__KeyToKey__ KeyCode::S, ModifierFlag::COMMAND_R, KeyCode::CURSOR_LEFT</autogen>
+		<autogen>__KeyToKey__ KeyCode::F, ModifierFlag::COMMAND_R, KeyCode::CURSOR_RIGHT</autogen>
+		<autogen>__KeyToKey__ KeyCode::W, ModifierFlag::COMMAND_R, KeyCode::CURSOR_LEFT,ModifierFlag::COMMAND_L</autogen>
+		<autogen>__KeyToKey__ KeyCode::R, ModifierFlag::COMMAND_R, KeyCode::CURSOR_RIGHT,ModifierFlag::COMMAND_L</autogen>
+		<autogen>__KeyToKey__ KeyCode::A, ModifierFlag::COMMAND_R, KeyCode::CURSOR_LEFT,ModifierFlag::OPTION_L</autogen>
+		<autogen>__KeyToKey__ KeyCode::G, ModifierFlag::COMMAND_R, KeyCode::CURSOR_RIGHT,ModifierFlag::OPTION_L</autogen>
+		<autogen>__KeyToKey__ KeyCode::Q, ModifierFlag::COMMAND_R, KeyCode::PAGEUP </autogen>
+		<autogen>__KeyToKey__ KeyCode::T, ModifierFlag::COMMAND_R, KeyCode::PAGEDOWN</autogen>
+	</item>
+	
+	
+	
+
+	<!--HHKBシミュレート-->
+	<item><name>HHK EMURATOR(NUMFUNC+OPERATOR)</name><identifier>private.hhk_operator</identifier>
+		<autogen>__KeyToKey__ KeyCode::KEY_1, ModifierFlag::COMMAND_R, KeyCode::F1</autogen>
+		<autogen>__KeyToKey__ KeyCode::KEY_2, ModifierFlag::COMMAND_R, KeyCode::F2</autogen>
+		<autogen>__KeyToKey__ KeyCode::KEY_3, ModifierFlag::COMMAND_R, KeyCode::F3</autogen>
+		<autogen>__KeyToKey__ KeyCode::KEY_4, ModifierFlag::COMMAND_R, KeyCode::F4</autogen>
+		<autogen>__KeyToKey__ KeyCode::KEY_5, ModifierFlag::COMMAND_R, KeyCode::F5</autogen>
+		<autogen>__KeyToKey__ KeyCode::KEY_6, ModifierFlag::COMMAND_R, KeyCode::F6</autogen>
+		<autogen>__KeyToKey__ KeyCode::KEY_7, ModifierFlag::COMMAND_R, KeyCode::F7</autogen>
+		<autogen>__KeyToKey__ KeyCode::KEY_8, ModifierFlag::COMMAND_R, KeyCode::F8</autogen>
+		<autogen>__KeyToKey__ KeyCode::KEY_9, ModifierFlag::COMMAND_R, KeyCode::F9</autogen>
+		<autogen>__KeyToKey__ KeyCode::KEY_0, ModifierFlag::COMMAND_R, KeyCode::F10</autogen>
+	</item>
+	
+	<!--テンキー実装、現状CTRLの上書きが強烈すぎるので後で対策考えましょう-->
+	<item><name>TENKEY EXTENTION</name><identifier>private.tenkey_extention</identifier>
+		<autogen>__KeyToKey__ KeyCode::N, ModifierFlag::COMMAND_R, KeyCode::KEY_0</autogen>
+		<autogen>__KeyToKey__ KeyCode::N, ModifierFlag::CONTROL_R, KeyCode::KEY_0</autogen>
+		<autogen>__KeyToKey__ KeyCode::M, ModifierFlag::COMMAND_R, KeyCode::KEY_1</autogen>
+		<autogen>__KeyToKey__ KeyCode::M, ModifierFlag::CONTROL_R, KeyCode::KEY_1</autogen>
+		<autogen>__KeyToKey__ KeyCode::COMMA, ModifierFlag::COMMAND_R, KeyCode::KEY_2</autogen>
+		<autogen>__KeyToKey__ KeyCode::COMMA, ModifierFlag::CONTROL_R, KeyCode::KEY_2</autogen>
+		<autogen>__KeyToKey__ KeyCode::DOT, ModifierFlag::COMMAND_R, KeyCode::KEY_3</autogen>
+		<autogen>__KeyToKey__ KeyCode::DOT, ModifierFlag::CONTROL_R, KeyCode::KEY_3</autogen>
+		<autogen>__KeyToKey__ KeyCode::J, ModifierFlag::COMMAND_R, KeyCode::KEY_4</autogen>
+		<autogen>__KeyToKey__ KeyCode::J, ModifierFlag::CONTROL_R, KeyCode::KEY_4</autogen>
+		<autogen>__KeyToKey__ KeyCode::K, ModifierFlag::COMMAND_R, KeyCode::KEY_5</autogen>
+		<autogen>__KeyToKey__ KeyCode::K, ModifierFlag::CONTROL_R, KeyCode::KEY_5</autogen>
+		<autogen>__KeyToKey__ KeyCode::L, ModifierFlag::COMMAND_R, KeyCode::KEY_6</autogen>
+		<autogen>__KeyToKey__ KeyCode::L, ModifierFlag::CONTROL_R, KeyCode::KEY_6</autogen>
+		<autogen>__KeyToKey__ KeyCode::U, ModifierFlag::COMMAND_R, KeyCode::KEY_7</autogen>
+		<autogen>__KeyToKey__ KeyCode::U, ModifierFlag::CONTROL_R, KeyCode::KEY_7</autogen>
+		<autogen>__KeyToKey__ KeyCode::I, ModifierFlag::COMMAND_R, KeyCode::KEY_8</autogen>
+		<autogen>__KeyToKey__ KeyCode::I, ModifierFlag::CONTROL_R, KeyCode::KEY_8</autogen>
+		<autogen>__KeyToKey__ KeyCode::O, ModifierFlag::COMMAND_R, KeyCode::KEY_9</autogen>
+		<autogen>__KeyToKey__ KeyCode::O, ModifierFlag::CONTROL_R, KeyCode::KEY_9</autogen>
+
+
+	</item>
+	
+	<!-- アプリ起動系のショートカット定義 -->
+	<vkopenurldef><name>KeyCode::VK_OPEN_URL_APPLICATION_FINDER</name>
+		<url type="file">/System/Library/CoreServices/Finder.app</url></vkopenurldef>
+	<vkopenurldef><name>KeyCode::VK_OPEN_URL_APPLICATION_TERMINAL</name>
+		<url type="file">/Applications/Utilities/Terminal.app</url></vkopenurldef>
+	<vkopenurldef><name>KeyCode::VK_OPEN_URL_APPLICATION_COTEDITOR</name>
+		<url type="file">/Applications/CotEditor.app</url></vkopenurldef>
+	<vkopenurldef><name>KeyCode::VK_OPEN_URL_APPLICATION_CHROME</name>
+		<url type="file">/Applications/Google Chrome.app</url></vkopenurldef>
+	<vkopenurldef><name>KeyCode::VK_OPEN_URL_APPLICATION_ATOM</name>
+		<url type="file">/Applications/Atom.app</url></vkopenurldef>
+	<vkopenurldef><name>KeyCode::VK_OPEN_URL_APPLICATION_PAGES</name>
+		<url type="file">/Applications/Pages.app</url></vkopenurldef>
+	<vkopenurldef><name>KeyCode::VK_OPEN_URL_APPLICATION_NUMBERS</name>
+		<url type="file">/Applications/Numbers.app</url></vkopenurldef>
+	<vkopenurldef><name>KeyCode::VK_OPEN_URL_APPLICATION_WORD</name>
+		<url type="file">/Applications/Microsoft Office 2011/Microsoft Word.app</url></vkopenurldef>		
+	<vkopenurldef><name>KeyCode::VK_OPEN_URL_APPLICATION_POWERPOINT</name>
+		<url type="file">/Applications/Microsoft Office 2011/Microsoft PowerPoint.app</url></vkopenurldef>
+	<vkopenurldef><name>KeyCode::VK_OPEN_URL_APPLICATION_EXCEL</name>
+		<url type="file">/Applications/Microsoft Office 2011/Microsoft Excel.app</url></vkopenurldef>
+	<vkopenurldef><name>KeyCode::VK_OPEN_URL_APPLICATION_PREFERENCES</name>
+		<url type="file">/Applications/System Preferences.app</url></vkopenurldef>
+	<vkopenurldef><name>KeyCode::VK_OPEN_URL_APPLICATION_ACTIVITY_MONITOR</name>
+		<url type="file">/Applications/Utilities/Activity Monitor.app</url></vkopenurldef>
+	<vkopenurldef><name>KeyCode::VK_OPEN_URL_APPLICATION_ECLIPSE</name>
+		<url type="file">/Applications/IDE/eclipse/Eclipse.app</url></vkopenurldef>
+	<vkopenurldef><name>KeyCode::VK_OPEN_URL_APPLICATION_P5</name>
+		<url type="file">/Applications/IDE/P5.app</url></vkopenurldef>
+	<vkopenurldef><name>KeyCode::VK_OPEN_URL_APPLICATION_INTELLIJ</name>
+		<url type="file">/Applications/IDE/IntelliJ IDEA 14 CE.app</url></vkopenurldef>
+	<vkopenurldef><name>KeyCode::VK_OPEN_URL_APPLICATION_TEAMVIEWER</name>
+		<url type="file">/Applications/TeamViewer.app</url></vkopenurldef>
+	<vkopenurldef><name>KeyCode::VK_OPEN_URL_APPLICATION_PREVIEW</name>
+		<url type="file">/Applications/Preview.app</url></vkopenurldef>
+	<item><name>APP ALIAS</name><identifier>private.launch_apps</identifier>
+		<!--extra modify (EXTRA1) 定義-->
+		<autogen>__KeyToKey__ KeyCode::COMMAND_R, ModifierFlag::COMMAND_L,KeyCode::VK_MODIFIER_EXTRA1 </autogen>
+		<autogen>__KeyToKey__ KeyCode::COMMAND_L, ModifierFlag::COMMAND_R,KeyCode::VK_MODIFIER_EXTRA1 </autogen>
+		<!--内容-->
+		<autogen>__KeyToKey__ KeyCode::Q, ModifierFlag::EXTRA1 , KeyCode::VK_OPEN_URL_APPLICATION_ACTIVITY_MONITOR</autogen>
+		<autogen>__KeyToKey__ KeyCode::W, ModifierFlag::EXTRA1 , KeyCode::VK_OPEN_URL_APPLICATION_TEAMVIEWER</autogen>
+		<autogen>__KeyToKey__ KeyCode::E, ModifierFlag::EXTRA1 , KeyCode::VK_OPEN_URL_APPLICATION_COTEDITOR</autogen>
+		<autogen>__KeyToKey__ KeyCode::R, ModifierFlag::EXTRA1 , KeyCode::VK_OPEN_URL_APPLICATION_PREVIEW</autogen>
+		<autogen>__KeyToKey__ KeyCode::T, ModifierFlag::EXTRA1 , KeyCode::VK_OPEN_URL_APPLICATION_TERMINAL</autogen>
+		<autogen>__KeyToKey__ KeyCode::Y, ModifierFlag::EXTRA1 , KeyCode::VK_NONE</autogen>
+		<autogen>__KeyToKey__ KeyCode::U, ModifierFlag::EXTRA1 , KeyCode::VK_OPEN_URL_APPLICATION_PAGES</autogen>
+		<autogen>__KeyToKey__ KeyCode::I, ModifierFlag::EXTRA1 , KeyCode::VK_OPEN_URL_APPLICATION_WORD</autogen>
+		<autogen>__KeyToKey__ KeyCode::O, ModifierFlag::EXTRA1 , KeyCode::VK_OPEN_URL_APPLICATION_EXCEL</autogen>
+		<autogen>__KeyToKey__ KeyCode::P, ModifierFlag::EXTRA1 , KeyCode::VK_OPEN_URL_APPLICATION_POWERPOINT</autogen>
+		<autogen>__KeyToKey__ KeyCode::A, ModifierFlag::EXTRA1 , KeyCode::VK_OPEN_URL_APPLICATION_ATOM</autogen>
+		<autogen>__KeyToKey__ KeyCode::S, ModifierFlag::EXTRA1 , KeyCode::VK_NONE</autogen>
+		<autogen>__KeyToKey__ KeyCode::D, ModifierFlag::EXTRA1 , KeyCode::F11</autogen>
+		<autogen>__KeyToKey__ KeyCode::F, ModifierFlag::EXTRA1 , KeyCode::VK_OPEN_URL_APPLICATION_FINDER</autogen>
+		<autogen>__KeyToKey__ KeyCode::G, ModifierFlag::EXTRA1 , KeyCode::VK_OPEN_URL_APPLICATION_CHROME</autogen>
+		<autogen>__KeyToKey__ KeyCode::H, ModifierFlag::EXTRA1 , KeyCode::VK_OPEN_URL_APPLICATION_P5</autogen>
+		<autogen>__KeyToKey__ KeyCode::J, ModifierFlag::EXTRA1 , KeyCode::VK_OPEN_URL_APPLICATION_INTELLIJ</autogen>
+		<autogen>__KeyToKey__ KeyCode::K, ModifierFlag::EXTRA1 , KeyCode::VK_NONE</autogen>
+		<autogen>__KeyToKey__ KeyCode::L, ModifierFlag::EXTRA1 , KeyCode::VK_OPEN_URL_APPLICATION_ECLIPSE</autogen>
+	</item>
+	
+	<!--Finder-->
+	<item><name>CHANGE KEY BIND : FINDER</name><identifier>private.change_finder_key_bind</identifier>
+		<only>FINDER</only> 
+		<uielementrole_not>AXTextField, AXTextArea</uielementrole_not>
+		<autogen>__KeyToKey__ KeyCode::KEY_2,ModifierFlag::CONTROL_R,KeyCode::RETURN</autogen>
+		<autogen>__KeyToKey__ KeyCode::RETURN, KeyCode::O,ModifierFlag::COMMAND_R</autogen>
+		<autogen>__KeyToKey__ KeyCode::BACKSLASH, ModifierFlag::COMMAND_R, KeyCode::DELETE, ModifierFlag::COMMAND_R</autogen>
+		<autogen>__KeyToKey__ KeyCode::BACKSLASH, KeyCode::BRACKET_LEFT,ModifierFlag::COMMAND_R</autogen>
+		<autogen>__KeyToKey__ KeyCode::Q, ModifierFlag::CONTROL_R, KeyCode::BRACKET_LEFT,ModifierFlag::COMMAND_R</autogen>
+		<autogen>__KeyToKey__ KeyCode::W, ModifierFlag::CONTROL_R, KeyCode::BRACKET_RIGHT,ModifierFlag::COMMAND_R</autogen>
+		<autogen>__KeyToKey__ KeyCode::E, ModifierFlag::CONTROL_R, KeyCode::KEY_1,ModifierFlag::COMMAND_R</autogen>
+		<autogen>__KeyToKey__ KeyCode::R, ModifierFlag::CONTROL_R, KeyCode::KEY_2,ModifierFlag::COMMAND_R</autogen>
+		<autogen>__KeyToKey__ KeyCode::A, ModifierFlag::CONTROL_R, KeyCode::A,ModifierFlag::COMMAND_R | ModifierFlag::SHIFT_L</autogen>
+		<autogen>__KeyToKey__ KeyCode::G, ModifierFlag::CONTROL_R, KeyCode::C, ModifierFlag::COMMAND_R | ModifierFlag::SHIFT_L</autogen>
+		<autogen>__KeyToKey__ KeyCode::D, ModifierFlag::CONTROL_R, KeyCode::D,ModifierFlag::COMMAND_R | ModifierFlag::SHIFT_L</autogen>
+		<autogen>__KeyToKey__ KeyCode::F, ModifierFlag::CONTROL_R, KeyCode::H,ModifierFlag::COMMAND_R | ModifierFlag::SHIFT_L</autogen>
+		<autogen>__KeyToKey__ KeyCode::KEY_1,KeyCode::KEY_1,ModifierFlag::COMMAND_R | ModifierFlag::CONTROL_R</autogen>
+		<autogen>__KeyToKey__ KeyCode::KEY_2,KeyCode::KEY_2,ModifierFlag::COMMAND_R | ModifierFlag::CONTROL_R</autogen>
+		<autogen>__KeyToKey__ KeyCode::KEY_3,KeyCode::KEY_3,ModifierFlag::COMMAND_R | ModifierFlag::CONTROL_R</autogen>
+		<autogen>__KeyToKey__ KeyCode::KEY_4,KeyCode::KEY_4,ModifierFlag::COMMAND_R | ModifierFlag::CONTROL_R</autogen>
+		<autogen>__KeyToKey__ KeyCode::KEY_5,KeyCode::KEY_5,ModifierFlag::COMMAND_R | ModifierFlag::CONTROL_R</autogen>
+		<autogen>__KeyToKey__ KeyCode::KEY_6,KeyCode::KEY_6,ModifierFlag::COMMAND_R | ModifierFlag::CONTROL_R</autogen>
+		<autogen>__KeyToKey__ KeyCode::KEY_7,KeyCode::KEY_7,ModifierFlag::COMMAND_R | ModifierFlag::CONTROL_R</autogen>
+		<autogen>__KeyToKey__ KeyCode::KEY_8,KeyCode::KEY_8,ModifierFlag::COMMAND_R | ModifierFlag::CONTROL_R</autogen>
+		<autogen>__KeyToKey__ KeyCode::DELETE, KeyCode::DELETE</autogen>
+		<autogen>__KeyToKey__ KeyCode::F,ModifierFlag::SHIFT_L | ModifierFlag::COMMAND_L,KeyCode::TAB,ModifierFlag::CONTROL_R</autogen>
+		<autogen>__KeyToKey__ KeyCode::S,ModifierFlag::SHIFT_L | ModifierFlag::COMMAND_L,KeyCode::TAB,ModifierFlag::CONTROL_R | ModifierFlag::SHIFT_L</autogen>
+		<autogen>__KeyToKey__ KeyCode::T,ModifierFlag::COMMAND_L,KeyCode::VK_NONE</autogen>
+	</item>
+	
+
+	<item><name>Disable Some Keys</name><identifier>private.disable_cmd_m</identifier>
+		<autogen>__KeyToKey__ KeyCode::M, ModifierFlag::COMMAND_L, KeyCode::VK_NONE</autogen>
+		<autogen>__KeyToKey__ KeyCode::H, ModifierFlag::COMMAND_L, KeyCode::VK_NONE</autogen>
+		<autogen>__KeyToKey__ KeyCode::TAB, ModifierFlag::COMMAND_R, KeyCode::TAB</autogen>
+	</item>
+	
+	<item><name>enable Window Changes</name><identifier>private.rcmd_op_wc</identifier>
+		<autogen>__KeyToKey__ KeyCode::P, ModifierFlag::COMMAND_R, KeyCode::F4, ModifierFlag::CONTROL_R</autogen>
+		<autogen>__KeyToKey__ KeyCode::O, ModifierFlag::COMMAND_R, KeyCode::F4, ModifierFlag::CONTROL_R | ModifierFlag::SHIFT_L</autogen>
+	</item>
+	
+	<item><name>Caps spotlight</name><identifier>private.capsspot</identifier>
+		<autogen>__KeyToKey__ KeyCode::PC_APPLICATION, KeyCode::S, ModifierFlag::CONTROL_R</autogen>
+	</item>
+
+
+
+
+	<!--左手カーソル移動増強-->
+	<item><name>CURSOR EXTENSIONS (LEFT HAND)</name><identifier>lh_cursor_extensions</identifier>
+		<autogen>__KeyToKey__ KeyCode::E, ModifierFlag::CONTROL_R, KeyCode::CURSOR_UP</autogen>
+		<autogen>__KeyToKey__ KeyCode::D, ModifierFlag::CONTROL_R, KeyCode::CURSOR_DOWN</autogen>
+		<autogen>__KeyToKey__ KeyCode::S, ModifierFlag::CONTROL_R, KeyCode::CURSOR_LEFT</autogen>
+		<autogen>__KeyToKey__ KeyCode::F, ModifierFlag::CONTROL_R, KeyCode::CURSOR_RIGHT</autogen>
+		<autogen>__KeyToKey__ KeyCode::W, ModifierFlag::CONTROL_R, KeyCode::CURSOR_LEFT,ModifierFlag::COMMAND_L</autogen>
+		<autogen>__KeyToKey__ KeyCode::R, ModifierFlag::CONTROL_R, KeyCode::CURSOR_RIGHT,ModifierFlag::COMMAND_L</autogen>
+		<autogen>__KeyToKey__ KeyCode::A, ModifierFlag::CONTROL_R, KeyCode::CURSOR_LEFT,ModifierFlag::OPTION_L</autogen>
+		<autogen>__KeyToKey__ KeyCode::G, ModifierFlag::CONTROL_R, KeyCode::CURSOR_RIGHT,ModifierFlag::OPTION_L</autogen>
+		<autogen>__KeyToKey__ KeyCode::Q, ModifierFlag::CONTROL_R, KeyCode::DELETE </autogen>
+		<autogen>__KeyToKey__ KeyCode::T, ModifierFlag::CONTROL_R, KeyCode::RETURN</autogen>
+	</item>
+	
+
+
+	<!--KarabinerのStandardsで使っているもの-->
+	<item><name>--------------Extracted Karabiner Standards------------------</name></item>
+	<item>
+		<name>Backslash(\) to Delete</name>
+		<appendix>(+ Fn+Backslash(\) to Backslash(\))</appendix>
+		<appendix>(+ retain Shift+Backslash(\))</appendix>
+		<identifier>remap.backslash2delete_retain_shiftbackslash_onPrivate.xml</identifier>
+		<autogen>__KeyToKey__ KeyCode::BACKSLASH, ModifierFlag::FN, KeyCode::BACKSLASH</autogen>
+		<autogen>
+			__KeyToKey__
+			KeyCode::BACKSLASH, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT,
+			KeyCode::BACKSLASH, ModifierFlag::SHIFT_L,
+		</autogen>
+		<autogen>__KeyToKey__ KeyCode::BACKSLASH, KeyCode::DELETE</autogen>
+	</item>
+	<item>
+		<name>Delete to Forward Delete</name>
+		<identifier>remap.delete2forwarddelete_onPrivate.xml</identifier>
+		<autogen>__KeyToKey__ KeyCode::DELETE, KeyCode::FORWARD_DELETE</autogen>
+	</item>
+	<item>
+		<name>Option_R to Fn</name>
+		<identifier>remap.optionR2fn_onPrivate.xml</identifier>
+		<autogen>__KeyToKey__ KeyCode::OPTION_R, KeyCode::FN</autogen>
+	</item>
+	<item>
+		<name>Backquote(`) to Escape if no modifiers pressed</name>
+		<identifier>remap.backquote2escape_withoutmodifiers_onPrivate.xml</identifier>
+		<autogen>__KeyToKey__ KeyCode::BACKQUOTE, ModifierFlag::NONE, KeyCode::ESCAPE</autogen>
+	</item>
+</root>
